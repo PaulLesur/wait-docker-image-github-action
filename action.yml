@@ -1,0 +1,35 @@
+# action.yml
+name: 'Wait Docker image'
+author: 'Paul Lesur'
+description: 'Wait for a Docker image to be available'
+
+branding:
+  icon: 'watch'  
+  color: 'blue'
+
+inputs:
+  image:
+    description: 'Docker image'
+    required: true
+  tag:
+    description: 'Tag'
+    required: false
+    default: 'latest'
+  timeout:
+    description: 'Timeout in seconds'
+    required: false
+    default: '3600'
+  fail-on-timeout:
+    description: 'Wether or not to fail the action on timeout'
+    required: false
+    default: 'true'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.image }}
+    - ${{ inputs.tag }}
+    - ${{ inputs.timeout }}
+    - ${{ inputs.fail-on-timeout }}
+
