@@ -23,6 +23,14 @@ inputs:
     description: 'Wether or not to fail the action on timeout'
     required: false
     default: 'true'
+  user:
+    description: 'Registry user'
+    required: false
+    default: 'no_auth'
+  password:
+    description: 'Registry password'
+    required: false
+    default: 'no_auth'
 
 runs:
   using: 'docker'
