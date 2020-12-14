@@ -1,0 +1,19 @@
+on: [push]
+
+jobs:
+  wait_action:
+    runs-on: ubuntu-latest
+    name: Wait unavailable docker image
+    steps:
+    - name: Wait Docker image
+      uses: actions/wait-docker-image-github-action@v0.1
+      with:
+        image: test/test
+        tag: master
+        timeout: 60
+        fail-on-timeout: false
+    
+    - name: Wait docker image
+      uses: actions/wait-docker-image-github-action@v0.1
+      with:
+        image: ubuntu
