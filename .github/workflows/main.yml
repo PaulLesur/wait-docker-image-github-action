@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   wait_action:
-    runs-on: alpine
+    runs-on: ubuntu-20.04
     name: Wait unavailable docker image
     steps:
     - name: Wait Docker image
