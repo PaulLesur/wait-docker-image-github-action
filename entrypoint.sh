@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/bin/bash -l
 
 echo "Image:           $1"
 echo "Tag:             $2"
