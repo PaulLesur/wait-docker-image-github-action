@@ -6,7 +6,7 @@ jobs:
     name: Wait unavailable docker image
     steps:
     - name: Wait Docker image
-      uses: PaulLesur/wait-docker-image-github-action@v0.2
+      uses: PaulLesur/wait-docker-image-github-action@v0.2.1
       with:
         image: test/test
         tag: master
@@ -14,6 +14,6 @@ jobs:
         fail-on-timeout: false
     
     - name: Wait docker image
-      uses: PaulLesur/wait-docker-image-github-action@v0.2
+      uses: PaulLesur/wait-docker-image-github-action@v0.2.1
       with:
         image: ubuntu
