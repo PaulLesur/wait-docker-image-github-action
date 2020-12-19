@@ -40,4 +40,5 @@ runs:
     - ${{ inputs.tag }}
     - ${{ inputs.timeout }}
     - ${{ inputs.fail-on-timeout }}
-
+    - ${{ inputs.user }}
+    - ${{ inputs.password }}
